@@ -582,7 +582,7 @@ class RegisterRoutes
 
             // Add authentication middleware based on the operation's authMethods
             if ($operation['authMethods']) {
-                foreach ($operation['authMethods'] as $authMethod) {
+                /* foreach ($operation['authMethods'] as $authMethod) {
                     if ($authMethod['isOAuth']) {
                         $route->add(new TokenAuthentication([
                             'path' => '/',
@@ -596,7 +596,7 @@ class RegisterRoutes
                             'error' => ['OpenAPIServer\Auth\OAuthAuthenticator', 'handleUnauthorized'],
                         ]));
                     }
-                }
+                } */
             }
 
             foreach ($middlewares as $middleware) {
